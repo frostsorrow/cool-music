@@ -1,0 +1,40 @@
+@import "variable";
+
+body{
+  font-family: "Microsoft YaHei",Arial,sans-serif;
+  background: @color-bg;
+}
+.clearfix:after {
+  content:"\200B";
+  display:block;
+  height:0;
+  clear:both;
+}
+.clearfix {
+  *zoom:1;
+}/*IE/7/6*/
+.hide{
+  display: none;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.oneline{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.extend-click{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+}
