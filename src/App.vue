@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <appHead></appHead>
     <router-view/>
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
+  import appHead from '@/components/head/head'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    appHead
+  }
 }
 </script>
 
-<style>
+<style lang="less" rel="stylesheet/less">
+  @import "common/style/variable.less";
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: @color-theme ;
 }
 </style>
